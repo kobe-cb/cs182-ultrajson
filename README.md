@@ -8,7 +8,7 @@
 
 ### Contents
 
-This repo consists of a forked repository of UltraJSON as well as our physical tests stored in cs182/. The following are contents and descriptions:
+This repo consists of a forked repository of UltraJSON as well as our physical tests stored in CS182Artifacts/. The following are contents and descriptions:
 
 - `demo.py`: Coverage-guided fuzz tester
 - `demo3.py`: Mutation-based fuzz tester
