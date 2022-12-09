@@ -1,0 +1,31 @@
+Script started on 2022-12-09 04:24:28-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="96" LINES="24"]
+[?2004h]0;maruchan@maruchan-virtual-machine: ~/atherisuwu[01;32mmaruchan@maruchan-virtual-machine[00m:[01;34m~/atherisuwu[00m$ python3 demo3.py _[K-max_total_time=3600
+[?2004lINFO: Instrumenting decimal
+INFO: Instrumenting numbers
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: found LLVMFuzzerCustomMutator (0x7f947810d8b0). Disabling -len_control by default.
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 822850340
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 3 ft: 3 corp: 1/1b exec/s: 0 rss: 36Mb
+#1048576	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 349525 rss: 36Mb
+#2097152	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 349525 rss: 36Mb
+#4194304	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 349525 rss: 36Mb
+#8388608	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 335544 rss: 36Mb
+#16777216	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 335544 rss: 36Mb
+#33554432	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 325771 rss: 36Mb
+#67108864	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 313592 rss: 36Mb
+#134217728	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 324197 rss: 36Mb
+#268435456	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 294984 rss: 36Mb
+#536870912	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 304348 rss: 36Mb
+#1073741824	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 319566 rss: 36Mb
+#1156765817	DONE   cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 321234 rss: 36Mb
+Done 1156765817 runs in 3601 second(s)
+[?2004h]0;maruchan@maruchan-virtual-machine: ~/atherisuwu[01;32mmaruchan@maruchan-virtual-machine[00m:[01;34m~/atherisuwu[00m$ exit
+[?2004lexit
+
+Script done on 2022-12-09 05:26:28-08:00 [COMMAND_EXIT_CODE="0"]

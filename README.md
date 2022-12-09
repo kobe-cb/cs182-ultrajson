@@ -1,3 +1,36 @@
+# CS182 Atheris Project: UltraJSON
+
+### Members:
+
+- Andre Amante
+- Kobe Braga
+- Roy Feng
+
+### Contents
+
+This repo consists of a forked repository of UltraJSON as well as our physical tests stored in cs182/. The following are contents and descriptions:
+
+- `demo.py`: Coverage-guided fuzz tester
+- `demo3.py`: Mutation-based fuzz tester
+- `demo.txt`: Output of runtime ~ 1 hr
+- `demo3.txt`: Output of runtime ~ 1 hr
+- `demosampleinput.txt`: Sample of fuzzed inputs given to UltraJSON ~1 min
+
+### Usage Guide
+
+Official documentation of installing Atheris and UltraJSON can be found in their respective GitHub's. Below are our steps in compiling and testing UltraJSON using Atheris.
+
+- `pip install ultrajson`
+- `pip install atheris`
+- `python3 demo.py`
+- `python3 demo3.py`
+
+Optional fields can be added to the Atheris program including but not limited to time limit, ram usage, and more
+
+- e.g. `python3 demo.py -max_total_time=3600`
+
+---
+
 # UltraJSON
 
 [![PyPI version](https://img.shields.io/pypi/v/ujson.svg?logo=pypi&logoColor=FFE873)](https://pypi.org/project/ujson)
@@ -80,7 +113,7 @@ Controls whether indentation ("pretty output") is enabled. Default is `0` (disab
 
 ## Benchmarks
 
-*UltraJSON* calls/sec compared to other popular JSON parsers with performance gain
+_UltraJSON_ calls/sec compared to other popular JSON parsers with performance gain
 specified below each.
 
 ### Test machine
@@ -90,39 +123,39 @@ Linux 5.0.0-1032-azure x86_64 #34-Ubuntu SMP Mon Feb 10 19:37:25 UTC 2020
 ### Versions
 
 - CPython 3.8.2 (default, Feb 28 2020, 14:28:43) [GCC 7.4.0]
-- nujson    : 1.35.2
-- orjson    : 2.6.1
+- nujson : 1.35.2
+- orjson : 2.6.1
 - simplejson: 3.17.0
-- ujson     : 2.0.2
+- ujson : 2.0.2
 
-|                                                                               | ujson      | nujson     | orjson     | simplejson | json       |
-|-------------------------------------------------------------------------------|-----------:|-----------:|-----------:|-----------:|-----------:|
-| Array with 256 doubles                                                        |            |            |            |            |            |
-| encode                                                                        |     22,082 |      4,282 |     76,975 |      5,328 |      5,436 |
-| decode                                                                        |     24,127 |     34,349 |     29,059 |     14,174 |     13,822 |
-| Array with 256 UTF-8 strings                                                  |            |            |            |            |            |
-| encode                                                                        |      3,557 |      2,528 |     24,300 |      3,061 |      2,068 |
-| decode                                                                        |      2,030 |      2,490 |        931 |        406 |        358 |
-| Array with 256 strings                                                        |            |            |            |            |            |
-| encode                                                                        |     39,041 |     31,769 |     76,403 |     16,615 |     16,910 |
-| decode                                                                        |     25,185 |     24,287 |     34,437 |     32,388 |     27,999 |
-| Medium complex object                                                         |            |            |            |            |            |
-| encode                                                                        |     10,382 |     11,427 |     32,995 |      3,959 |      5,275 |
-| decode                                                                        |      9,785 |      9,796 |     11,515 |      5,898 |      7,200 |
-| Array with 256 True values                                                    |            |            |            |            |            |
-| encode                                                                        |    114,341 |    101,039 |    344,256 |     62,382 |     72,872 |
-| decode                                                                        |    149,367 |    151,615 |    181,123 |    114,597 |    130,392 |
-| Array with 256 dict{string, int} pairs                                        |            |            |            |            |            |
-| encode                                                                        |     13,715 |     14,420 |     51,942 |      3,271 |      6,584 |
-| decode                                                                        |     12,670 |     11,788 |     12,176 |      6,743 |      8,278 |
-| Dict with 256 arrays with 256 dict{string, int} pairs                         |            |            |            |            |            |
-| encode                                                                        |         50 |         54 |        216 |         10 |         23 |
-| decode                                                                        |         32 |         32 |         30 |         20 |         23 |
-| Dict with 256 arrays with 256 dict{string, int} pairs, outputting sorted keys |            |            |            |            |            |
-| encode                                                                        |         46 |         41 |            |          8 |         24 |
-| Complex object                                                                |            |            |            |            |            |
-| encode                                                                        |        533 |        582 |            |        408 |        431 |
-| decode                                                                        |        466 |        454 |            |        154 |        164 |
+|                                                                               |   ujson |  nujson |  orjson | simplejson |    json |
+| ----------------------------------------------------------------------------- | ------: | ------: | ------: | ---------: | ------: |
+| Array with 256 doubles                                                        |         |         |         |            |         |
+| encode                                                                        |  22,082 |   4,282 |  76,975 |      5,328 |   5,436 |
+| decode                                                                        |  24,127 |  34,349 |  29,059 |     14,174 |  13,822 |
+| Array with 256 UTF-8 strings                                                  |         |         |         |            |         |
+| encode                                                                        |   3,557 |   2,528 |  24,300 |      3,061 |   2,068 |
+| decode                                                                        |   2,030 |   2,490 |     931 |        406 |     358 |
+| Array with 256 strings                                                        |         |         |         |            |         |
+| encode                                                                        |  39,041 |  31,769 |  76,403 |     16,615 |  16,910 |
+| decode                                                                        |  25,185 |  24,287 |  34,437 |     32,388 |  27,999 |
+| Medium complex object                                                         |         |         |         |            |         |
+| encode                                                                        |  10,382 |  11,427 |  32,995 |      3,959 |   5,275 |
+| decode                                                                        |   9,785 |   9,796 |  11,515 |      5,898 |   7,200 |
+| Array with 256 True values                                                    |         |         |         |            |         |
+| encode                                                                        | 114,341 | 101,039 | 344,256 |     62,382 |  72,872 |
+| decode                                                                        | 149,367 | 151,615 | 181,123 |    114,597 | 130,392 |
+| Array with 256 dict{string, int} pairs                                        |         |         |         |            |         |
+| encode                                                                        |  13,715 |  14,420 |  51,942 |      3,271 |   6,584 |
+| decode                                                                        |  12,670 |  11,788 |  12,176 |      6,743 |   8,278 |
+| Dict with 256 arrays with 256 dict{string, int} pairs                         |         |         |         |            |         |
+| encode                                                                        |      50 |      54 |     216 |         10 |      23 |
+| decode                                                                        |      32 |      32 |      30 |         20 |      23 |
+| Dict with 256 arrays with 256 dict{string, int} pairs, outputting sorted keys |         |         |         |            |         |
+| encode                                                                        |      46 |      41 |         |          8 |      24 |
+| Complex object                                                                |         |         |         |            |         |
+| encode                                                                        |     533 |     582 |         |        408 |     431 |
+| decode                                                                        |     466 |     454 |         |        154 |     164 |
 
 ## Build options
 

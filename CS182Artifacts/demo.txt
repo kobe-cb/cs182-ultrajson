@@ -1,0 +1,30 @@
+Script started on 2022-12-09 04:24:10-08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="24"]
+[?2004h]0;maruchan@maruchan-virtual-machine: ~/atherisuwu[01;32mmaruchan@maruchan-virtual-machine[00m:[01;34m~/atherisuwu[00m$ python3 demo.py -max_total_time= 36--[K[K00
+[?2004lINFO: Instrumenting decimal
+INFO: Instrumenting numbers
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3084067407
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 2 ft: 2 corp: 1/1b exec/s: 0 rss: 36Mb
+#1048576	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 524288 rss: 36Mb
+#2097152	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 419430 rss: 37Mb
+#4194304	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 381300 rss: 37Mb
+#8388608	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 364722 rss: 38Mb
+#16777216	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 356962 rss: 39Mb
+#33554432	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 353204 rss: 42Mb
+#67108864	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 332222 rss: 47Mb
+#134217728	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 339791 rss: 58Mb
+#268435456	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 311049 rss: 80Mb
+#536870912	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 317487 rss: 124Mb
+#1073741824	pulse  cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 332530 rss: 212Mb
+#1207067997	DONE   cov: 2 ft: 2 corp: 1/1b lim: 4096 exec/s: 335203 rss: 234Mb
+Done 1207067997 runs in 3601 second(s)
+[?2004h]0;maruchan@maruchan-virtual-machine: ~/atherisuwu[01;32mmaruchan@maruchan-virtual-machine[00m:[01;34m~/atherisuwu[00m$ exit
+[?2004lexit
+
+Script done on 2022-12-09 05:26:30-08:00 [COMMAND_EXIT_CODE="0"]
